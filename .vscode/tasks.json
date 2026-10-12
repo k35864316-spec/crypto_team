@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "MongoDB 시작 (Docker)", "type": "shell", "command": "docker compose up -d", "problemMatcher": [] },
+    { "label": "개발 서버", "type": "npm", "script": "dev", "isBackground": true, "problemMatcher": [] },
+    { "label": "전체 검사 (타입+린트)", "type": "npm", "script": "check", "problemMatcher": ["$tsc"] }
+  ]
+}
