@@ -1,0 +1,67 @@
+{
+  // 사용법: .tsx/.ts 파일에서 접두어 입력 후 Tab
+  "Client Component": {
+    "scope": "typescriptreact",
+    "prefix": "ncc",
+    "body": [
+      "\"use client\";",
+      "",
+      "import { useState } from \"react\";",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "  const [${2:value}, set${2/(.*)/${1:/capitalize}/}] = useState(${3:null});",
+      "  return <div>$0</div>;",
+      "}",
+      ""
+    ],
+    "description": "Next.js 클라이언트 컴포넌트"
+  },
+  "Page": {
+    "scope": "typescriptreact",
+    "prefix": "npage",
+    "body": [
+      "export default function ${1:Page}() {",
+      "  return (",
+      "    <div className=\"space-y-6\">$0</div>",
+      "  );",
+      "}",
+      ""
+    ],
+    "description": "Next.js App Router 페이지"
+  },
+  "Dynamic Page": {
+    "scope": "typescriptreact",
+    "prefix": "ndpage",
+    "body": [
+      "export default async function ${1:Page}({ params }: PageProps<\"/${2:route}/[${3:id}]\">) {",
+      "  const { ${3:id} } = await params;",
+      "  return <div>{${3:id}}</div>;",
+      "}",
+      ""
+    ],
+    "description": "동적 경로 페이지 (params 사용)"
+  },
+  "Route Handler": {
+    "scope": "typescript",
+    "prefix": "nroute",
+    "body": [
+      "export async function ${1|GET,POST,PUT,PATCH,DELETE|}(request: Request) {",
+      "  $0",
+      "  return Response.json({ ok: true });",
+      "}",
+      ""
+    ],
+    "description": "Next.js Route Handler (API)"
+  },
+  "Service Stub": {
+    "scope": "typescript",
+    "prefix": "nstub",
+    "body": [
+      "/** ${3:설명}. TODO(${2:담당자}) */",
+      "export async function ${1:name}(): Promise<${4:void}> {",
+      "  throw new NotImplementedError(\"${3:설명}\", \"${2:담당자}\");",
+      "}"
+    ],
+    "description": "service.ts 미구현 함수 틀"
+  }
+}

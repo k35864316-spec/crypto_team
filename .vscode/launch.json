@@ -11,7 +11,15 @@
       "name": "Next.js: 브라우저 디버그 (Chrome)",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:3000"
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Next.js: 브라우저 디버그 (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
     },
     {
       "name": "Next.js: 풀스택 디버그",

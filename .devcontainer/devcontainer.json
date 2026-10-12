@@ -1,0 +1,24 @@
+{
+  // VS Code "Dev Containers: Reopen in Container"로 누구나 같은 개발 환경을 사용 (Docker 필요)
+  "name": "crypto_team (Next.js + TypeScript)",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "forwardPorts": [3000],
+  "portsAttributes": { "3000": { "label": "Next.js", "onAutoForward": "openBrowser" } },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "editorconfig.editorconfig",
+        "usernamehw.errorlens",
+        "yoavbls.pretty-ts-errors",
+        "bradlc.vscode-tailwindcss",
+        "christian-kohler.path-intellisense",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  }
+}

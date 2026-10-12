@@ -1,8 +1,30 @@
 {
   "version": "2.0.0",
   "tasks": [
-    { "label": "MongoDB 시작 (Docker)", "type": "shell", "command": "docker compose up -d", "problemMatcher": [] },
-    { "label": "개발 서버", "type": "npm", "script": "dev", "isBackground": true, "problemMatcher": [] },
-    { "label": "전체 검사 (타입+린트)", "type": "npm", "script": "check", "problemMatcher": ["$tsc"] }
+    {
+      "label": "개발 서버 (npm run dev)",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "빌드 (npm run build)",
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": ["$tsc"],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "전체 검사 (타입 + 린트)",
+      "type": "npm",
+      "script": "check",
+      "problemMatcher": ["$tsc", "$eslint-stylish"],
+      "group": { "kind": "test", "isDefault": true }
+    },
+    { "label": "린트 (npm run lint)", "type": "npm", "script": "lint", "problemMatcher": ["$eslint-stylish"] },
+    { "label": "포맷 (npm run format)", "type": "npm", "script": "format", "problemMatcher": [] },
+    { "label": "패키지 설치 (npm install)", "type": "shell", "command": "npm install", "problemMatcher": [] }
   ]
 }

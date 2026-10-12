@@ -1,0 +1,4 @@
+# Windows/macOS 팀원 간 줄바꿈 충돌 방지
+* text=auto eol=lf
+*.png binary
+*.ico binary

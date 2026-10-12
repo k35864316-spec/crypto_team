@@ -1,11 +1,22 @@
 {
+  // 폴더를 열면 VS Code가 아래 확장 설치를 제안한다.
   "recommendations": [
+    // 코드 품질
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "usernamehw.errorlens",
+    "yoavbls.pretty-ts-errors",
+    // Next.js / Tailwind 개발
     "bradlc.vscode-tailwindcss",
-    "mongodb.mongodb-vscode",
-    "ms-azuretools.vscode-docker",
-    "mikestead.dotenv",
-    "usernamehw.errorlens"
+    "christian-kohler.path-intellisense",
+    // Git / GitHub 협업
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "ms-vsliveshare.vsliveshare",
+    // 문서 / 환경
+    "yzhang.markdown-all-in-one",
+    "ms-ceintl.vscode-language-pack-ko",
+    "ms-vscode-remote.remote-containers"
   ]
 }
